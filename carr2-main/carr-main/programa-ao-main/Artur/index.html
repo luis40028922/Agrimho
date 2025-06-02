@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festejando a Conexão Campo à Cidade</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://example.com/imagem-campo-cidade.jpg'); /* Imagem de fundo que representa a conexão entre o campo e a cidade */
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.6); /* fundo translúcido para melhorar a leitura */
+            border-radius: 15px;
+        }
+
+        h1, h2 {
+            color: #fff;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            background-color: #333;
+            border: 1px solid #555;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tab-button:hover {
+            background-color: #555;
+        }
+
+        .tab-button.active {
+            background-color: #ff6600; /* cor de destaque */
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Festejando a Conexão Campo à Cidade</h1>
+
+    <div class="tabs">
+        <button class="tab-button active" onclick="showTab('campo')">Vida no Campo</button>
+        <button class="tab-button" onclick="showTab('cidade')">Vida na Cidade</button>
+        <button class="tab-button" onclick="showTab('conexao')">A Conexão entre Campo e Cidade</button>
+        <button class="tab-button" onclick="showTab('imagem')">Descrições das Imagens</button>
+    </div>
+
+    <div id="campo" class="tab-content active">
+        <h2>Vida no Campo</h2>
+        <img src="download (1).jpeg" alt="Vida no Campo">
+        <p>A vida no campo é marcada pela tranquilidade, conexão com a natureza e um ritmo mais calmo. O cultivo de plantas e a criação de animais são atividades comuns, e há um forte vínculo com as tradições rurais.</p>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+
+    <div id="cidade" class="tab-content">
+        <h2>Vida na Cidade</h2>
+        <img src="download (2).jpeg" alt="Vida na Cidade">
+        <p>A vida na cidade é cheia de dinamismo, agitação e oportunidades. As grandes construções, o comércio e a diversidade cultural são características marcantes desse ambiente.</p>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+
+    <div id="conexao" class="tab-content">
+        <h2>A Conexão entre Campo e Cidade</h2>
+        <img src="Campo-e-Cidade-na-Educacao-Infantil-e1719951751413.webp" alt="Conexão Campo e Cidade">
+        <p>A conexão entre o campo e a cidade é essencial. O campo fornece recursos naturais e alimentos para a cidade, enquanto a cidade oferece avanços tecnológicos e culturais para o campo. A troca é fundamental para o progresso de ambos.</p>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+
+    <div id="imagem" class="tab-content">
+        <h2>Descrições das Imagens</h2>
+        <p><strong>Imagem Vida no Campo:</strong> Esta imagem mostra uma paisagem rural serena, com campos verdes e um céu claro, representando a tranquilidade da vida no campo.</p>
+        <p><strong>Imagem Vida na Cidade:</strong> A imagem da cidade destaca a arquitetura urbana e o movimento das pessoas, refletindo a dinâmica da vida nas grandes metrópoles.</p>
+        <p><strong>Imagem Conexão entre Campo e Cidade:</strong> Esta imagem ilustra o contraste entre o rural e o urbano, simbolizando a interdependência entre esses dois mundos.</p>
+    </div>
+</div>
+
+<script>
+    function showTab(tabId) {
+        // Oculta todos os conteúdos
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Desativa todos os botões
+        const buttons = document.querySelectorAll('.tab-button');
+        buttons.forEach(button => button.classList.remove('active'));
+
+        // Mostra a aba clicada
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
